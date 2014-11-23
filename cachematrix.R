@@ -1,5 +1,5 @@
-## The following functions provide a way to cache a square invertible
-## matrix "a" and compute and cache it's inverse "b"
+## The following functions provide a way to cache a square, invertible
+## matrix "a" and compute and cache it's inverse "b".
 
 ## This function will cache matrix "a" with the "set" function and return the cache with the "get"
 ## function.  Additionally, the inverse matrix "b" can be calculated with the "setinverse" 
@@ -18,7 +18,7 @@ makeCacheMatrix <- function(a = matrix()) {
        getinverse = getinverse)
 }
 
-## This function returns the inverse of a square invertible matrix.
+## This function returns the inverse of a square, invertible matrix.
 ## If the inputMatrix has already been inverted, the function simply
 ## returns the cached matrix "b", otherwise, the inverted matrix is
 ## computed, cached in the inputMatrix function and returned.
@@ -26,7 +26,7 @@ cacheSolve <- function(inputMatrix, ...) {
   ## Return a matrix that is the inverse of 'a'
   inverseMatrix <- inputMatrix$getinverse()
   if(!is.null(inverseMatrix)) {
-    message("getting cached data")
+    message("Getting cached inverse matrix:")
     return(inverseMatrix)
   }
   tmpInputMatrix <- inputMatrix$get()
